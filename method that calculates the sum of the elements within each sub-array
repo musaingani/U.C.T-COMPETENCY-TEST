@@ -1,0 +1,23 @@
+public class CalSubArraySum {
+    public int findSum(int [] arrA){
+
+        int arrSize = arrA.length;
+        int totalSum = 0;
+        for (int startPoint = 0; startPoint <arrSize ; startPoint++) {
+            for (int grps = startPoint; grps <=arrSize ; grps++) {
+                
+                for (int j = startPoint ; j < grps ; j++) {
+                    totalSum += arrA[j];
+                }
+            }
+        }
+        return totalSum;
+    }
+
+    public static void main(String[] args) {
+        int [] arrA = {[2, 3, 1, 6], [4, 8, 1, 2], [9, 2]};
+        int sum = new SubArraySum().findSum(arrA);
+        System.out.println("Sum of elements of sub arrays is: " +  sum);
+    }
+
+}
