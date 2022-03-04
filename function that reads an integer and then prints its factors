@@ -1,0 +1,29 @@
+using System;
+
+class Competency
+{
+    static void PrintFactors(int num)
+    {
+        int iLoop = 0;
+        Console.WriteLine("The factors of " + num + " are :");
+
+        for (iLoop = 1; iLoop <= num; iLoop++)
+        {
+            if (num % iLoop == 0)
+            {
+                Console.Write(iLoop + " ");
+            }
+        }
+    }
+    static void Main(string[] args)
+    {
+        int number= 0;
+        
+        Console.Write("Please enter a positive or negative real number: ");
+        number = int.Parse(Console.ReadLine());
+
+        PrintFactors(num);
+
+        Console.WriteLine();
+    }
+}
