@@ -1,0 +1,18 @@
+class Comparing  
+{
+    static void Main()  
+    {    
+        string[] names1 = System.IO.File.ReadAllLines(@"File_path");  
+        string[] names2 = System.IO.File.ReadAllLines(@"File_path");   
+        
+        IEnumerable<string> differenceQuery =  
+          names1.Except(names2);  
+   
+        Console.WriteLine("The following lines are in names1.txt but not names2.txt");  
+        foreach (string s in differenceQuery)  
+            Console.WriteLine(s);  
+  
+        Console.WriteLine("Press any key to exit");  
+        Console.ReadKey();  
+    }  
+}  
