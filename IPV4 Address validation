@@ -1,0 +1,18 @@
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text.RegularExpressions;
+namespace IPaddressDemo {
+   class Example {
+      public static void Main() {
+         IPAddress IP;
+         Console.WriteLine("Enter the IP Address: ");
+         string ipAddr = Console.ReadLine();
+         bool flag = IPAddress.TryParse(ipAddr, out IP);
+         if (flag)
+         Console.WriteLine("{0} is a valid IP address", ipAddr);
+         else
+         Console.WriteLine("{0} is not a valid IP address", ipAddr);
+      }
+   }
+}
