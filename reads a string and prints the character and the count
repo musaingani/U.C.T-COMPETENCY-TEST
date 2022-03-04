@@ -1,0 +1,7 @@
+string str = "String_name";//String_name is the name of the string to read, printed and countend
+Console.WriteLine("String: "+str)
+for (int j = 0; j < str.Length; j++) {
+   if (str[0] == str[j]) {
+      cal++;
+   }
+}
